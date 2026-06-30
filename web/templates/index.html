@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>AI Image Detector</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤖 AI Image Detector</h1>
+
+<p>Detect whether an image is AI Generated or Real.</p>
+
+<form
+action="/predict"
+method="POST"
+enctype="multipart/form-data">
+
+<input
+type="file"
+name="image"
+required>
+
+<br><br>
+
+<button type="submit">
+
+Analyze Image
+
+</button>
+
+</form>
+
+{% if prediction %}
+
+<div class="result">
+
+<h2>{{ prediction }}</h2>
+
+<h3>Confidence : {{ confidence }}%</h3>
+
+<div class="progress">
+
+<div
+class="progress-bar"
+style="width: {{ confidence }}%;">
+
+{{ confidence }}%
+
+</div>
+
+</div>
+
+<br>
+
+<img
+src="{{ url_for('uploaded_file', filename=image) }}"
+width="350">
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
