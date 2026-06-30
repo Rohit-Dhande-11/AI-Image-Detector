@@ -1,17 +1,22 @@
 ```sh
 # 🤖 AI Image Detector
 
-A Deep Learning web application that detects whether an uploaded image is **AI Generated** or **Real**.
+A Deep Learning web application that classifies uploaded images as **AI Generated** or **Real Images** using TensorFlow and EfficientNetB0.
 
-## Features
+---
 
-- Image Upload
-- AI vs Real Classification
+## 🚀 Features
+
+- Upload any image
+- Detect AI Generated vs Real
 - Confidence Score
-- Flask Web Interface
-- TensorFlow + EfficientNetB0
+- Modern Flask Web Interface
+- EfficientNetB0 Transfer Learning
+- 93% Test Accuracy
 
-## Technologies
+---
+
+## 🛠 Tech Stack
 
 - Python
 - TensorFlow
@@ -19,28 +24,45 @@ A Deep Learning web application that detects whether an uploaded image is **AI G
 - Flask
 - HTML
 - CSS
+- NumPy
 
-## Project Structure
+---
+
+## 📊 Model Performance
+
+| Metric | Value |
+|---------|-------|
+| Test Accuracy | 93% |
+| Architecture | EfficientNetB0 |
+| Framework | TensorFlow |
+
+---
+
+## 📂 Project Structure
 
 ```
 AI-Image-Detector
 │
-├── src
-├── web
-├── models
-├── processed_data
+├── models/
+├── src/
+├── web/
 ├── requirements.txt
 └── README.md
 ```
 
-## Accuracy
+---
 
-Test Accuracy: **93%**
+## 🔮 Future Improvements
 
-## Future Improvements
-
-- Grad-CAM Visualization
+- Grad-CAM Explainability
 - Better Dataset
+- Support for Latest AI Models
 - Improved UI
-- Support for More AI Models
+- Cloud Deployment
+
+---
+
+## 👨‍💻 Author
+
+Rohit Dhande
 ```
