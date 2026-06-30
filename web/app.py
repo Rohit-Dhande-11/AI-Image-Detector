@@ -25,8 +25,8 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 # Load Model
 # ---------------------------------------
 
-model = keras.models.load_model("models/ai_detector.keras")
-
+MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "ai_detector.keras")
+model = keras.models.load_model(MODEL_PATH)
 IMAGE_SIZE = (224, 224)
 
 # ---------------------------------------
